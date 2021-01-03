@@ -3,6 +3,7 @@ package at.htl.entity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
 import javax.persistence.Id;
+import java.util.List;
 
 public class Calendar extends PanacheEntity {
 
@@ -12,4 +13,6 @@ public class Calendar extends PanacheEntity {
     String desc;
 
     String pw;
+
+    List<Appointment> appointments;
 }
