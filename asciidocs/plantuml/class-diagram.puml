@@ -1,0 +1,21 @@
+@startuml
+
+class Calendar {
+    id : Long
+    name : String
+    description : String
+    password : String
+    appointmentList : List
+}
+
+class Appointment {
+    id : Long
+    title : String
+    description : String
+    start : LocalDateTime
+    end : LocalDateTime
+}
+
+Calendar "1" -- "*" Appointment : is part of <
+
+@enduml
