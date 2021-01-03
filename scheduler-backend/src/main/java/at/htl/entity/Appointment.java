@@ -20,4 +20,14 @@ public class Appointment extends PanacheEntity {
     LocalDateTime start;
 
     LocalDateTime end;
+
+    public Appointment() {
+    }
+
+    public Appointment(String title, String desc, LocalDateTime start, LocalDateTime end) {
+        this.title = title;
+        this.desc = desc;
+        this.start = start;
+        this.end = end;
+    }
 }
