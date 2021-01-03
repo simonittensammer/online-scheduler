@@ -15,4 +15,13 @@ public class Calendar extends PanacheEntity {
     String pw;
 
     List<Appointment> appointments;
+
+    public Calendar() {
+    }
+
+    public Calendar(String name, String desc, String pw) {
+        this.name = name;
+        this.desc = desc;
+        this.pw = pw;
+    }
 }
