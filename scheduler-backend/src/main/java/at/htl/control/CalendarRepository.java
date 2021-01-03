@@ -1,4 +1,7 @@
 package at.htl.control;
 
-public class CalendarRepository {
+import at.htl.entity.Calendar;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
+
+public class CalendarRepository implements PanacheRepository<Calendar> {
 }
