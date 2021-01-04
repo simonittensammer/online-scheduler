@@ -2,9 +2,12 @@ package at.htl.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
+@Entity
 public class Calendar extends PanacheEntity {
 
     @Id
@@ -14,6 +17,7 @@ public class Calendar extends PanacheEntity {
 
     String pw;
 
+    @OneToMany
     List<Appointment> appointments;
 
     public Calendar() {
