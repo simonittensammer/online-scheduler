@@ -19,7 +19,6 @@ Content-Type: application/json
   "name": "Calendar1",
   "description": "Test Description",
   "pw": "testpassword"
-
 }
 
 ###
@@ -33,6 +32,15 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description"
   }
+}
+
+###
+
+DELETE http://localhost:8080/appointment/1
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1"
 }
 
 ###

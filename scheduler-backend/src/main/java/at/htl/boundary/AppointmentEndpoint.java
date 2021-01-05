@@ -41,14 +41,28 @@ public class AppointmentEndpoint {
         );
 
         ar.persist(appointment);
-        Calendar calendar = cr.findByName(calendarName);
 
+        Calendar calendar = cr.findByName(calendarName);
         List<Appointment> appointments = calendar.getAppointments();
         appointments.add(appointment);
         calendar.setAppointments(appointments);
 
         cr.update(calendar);
 
+        return Response.ok(appointment).build();
+    }
+
+    @DELETE
+    @Path("/{id}")
+    public Response deleteAppointment(@PathParam("id") Long id, JsonObject jsonObject) {
+        Appointment appointment = ar.findById(id);
+
+        Calendar calendar = cr.findByName(jsonObject.getString("calendarName"));
+        List<Appointment> appointments = calendar.getAppointments();
+        appointments.remove(appointment);
+        calendar.setAppointments(appointments);
+
+        ar.delete(appointment);
         return Response.ok(appointment).build();
     }
 }
