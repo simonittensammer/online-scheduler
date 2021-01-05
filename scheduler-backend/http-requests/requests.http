@@ -4,6 +4,10 @@ GET http://localhost:8080/calendar
 
 ###
 
+GET http://localhost:8080/calendar/Calendar1
+
+###
+
 GET http://localhost:8080/appointment
 
 ###
@@ -12,7 +16,7 @@ POST http://localhost:8080/calendar
 Content-Type: application/json
 
 {
-  "name": "Calendar 1",
+  "name": "Calendar1",
   "description": "Test Description",
   "pw": "testpassword"
 

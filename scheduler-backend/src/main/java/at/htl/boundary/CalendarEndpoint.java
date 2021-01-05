@@ -31,6 +31,12 @@ public class CalendarEndpoint {
         }).collect(Collectors.toList());
     }
 
+    @GET
+    @Path("/{name}")
+    public Calendar getCalendar(@PathParam("name") String name) {
+        return cr.findByName(name);
+    }
+
     @POST
     public Response addCalendar(Calendar calendar) {
         cr.persist(calendar);
