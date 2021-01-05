@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Entity
+@Table(name = "APP_CALENDAR")
 public class Calendar {
 
     @Id

@@ -3,6 +3,7 @@ package at.htl.boundary;
 import at.htl.control.CalendarRepository;
 import at.htl.entity.Appointment;
 import at.htl.entity.Calendar;
+import org.hibernate.Hibernate;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -11,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Path("/calendar")
 @ApplicationScoped
@@ -24,7 +26,9 @@ public class CalendarEndpoint {
 
     @GET
     public List<Calendar> getAll() {
-        return cr.listAll();
+        return cr.streamAll().peek(o -> {
+            Hibernate.initialize(o.getAppointments());
+        }).collect(Collectors.toList());
     }
 
     @POST
