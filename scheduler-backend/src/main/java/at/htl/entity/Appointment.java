@@ -1,21 +1,74 @@
 package at.htl.entity;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.json.bind.annotation.JsonbDateFormat;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Appointment extends PanacheEntity {
+@Table(name = "APP_APPOINTMENT")
+public class Appointment {
 
-    String title;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    String desc;
+    private String title;
 
-    LocalDateTime start;
+    private String description;
 
-    LocalDateTime end;
+//    @JsonbDateFormat("yyyy-MM-dd HH:mm:ss")
+//    private LocalDateTime start;
+//
+//    @JsonbDateFormat("yyyy-MM-dd HH:mm:ss")
+//    private LocalDateTime end;
+
+    public Appointment() {
+    }
+
+    public Appointment(String title, String description/*, LocalDateTime start, LocalDateTime end*/) {
+        this.title = title;
+        this.description = description;
+//        this.start = start;
+//        this.end = end;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+//    public LocalDateTime getStart() {
+//        return start;
+//    }
+//
+//    public void setStart(LocalDateTime start) {
+//        this.start = start;
+//    }
+//
+//    public LocalDateTime getEnd() {
+//        return end;
+//    }
+//
+//    public void setEnd(LocalDateTime end) {
+//        this.end = end;
+//    }
 }
