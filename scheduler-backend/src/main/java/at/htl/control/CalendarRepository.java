@@ -1,6 +1,7 @@
 package at.htl.control;
 
 import at.htl.entity.Calendar;
+import io.quarkus.hibernate.orm.panache.Panache;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import org.hibernate.Hibernate;
 
@@ -10,6 +11,10 @@ import javax.transaction.Transactional;
 @Transactional
 @ApplicationScoped
 public class CalendarRepository implements PanacheRepository<Calendar> {
+
+    public void update(Calendar calendar){
+        Panache.getEntityManager().merge(calendar);
+    }
 
     public Calendar findByName(String name) {
         Calendar calendar = find("name", name).firstResult();

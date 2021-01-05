@@ -1,10 +1,13 @@
 package at.htl.boundary;
 
 import at.htl.control.AppointmentRepository;
+import at.htl.control.CalendarRepository;
 import at.htl.entity.Appointment;
+import at.htl.entity.Calendar;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.json.JsonObject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -21,14 +24,31 @@ public class AppointmentEndpoint {
     @Inject
     AppointmentRepository ar;
 
+    @Inject
+    CalendarRepository cr;
+
     @GET
     public List<Appointment> getAll() {
         return ar.listAll();
     }
 
     @POST
-    public Response addAppointment(Appointment appointment) {
+    public Response addAppointment(JsonObject jsonObject) {
+        String calendarName = jsonObject.getString("calendarName");
+        Appointment appointment = new Appointment(
+                jsonObject.getJsonObject("appointment").getString("title"),
+                jsonObject.getJsonObject("appointment").getString("description")
+        );
+
         ar.persist(appointment);
+        Calendar calendar = cr.findByName(calendarName);
+
+        List<Appointment> appointments = calendar.getAppointments();
+        appointments.add(appointment);
+        calendar.setAppointments(appointments);
+
+        cr.update(calendar);
+
         return Response.ok(appointment).build();
     }
 }
