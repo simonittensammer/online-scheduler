@@ -1,6 +1,7 @@
 package at.htl.entity;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -9,7 +10,7 @@ public class Calendar {
     @Id
     private String name;
 
-    private String desc;
+    private String description;
 
     private String pw;
 
@@ -19,11 +20,11 @@ public class Calendar {
     public Calendar() {
     }
 
-    public Calendar(String name, String desc, String pw, List<Appointment> appointments) {
+    public Calendar(String name, String description, String pw) {
         this.name = name;
-        this.desc = desc;
+        this.description = description;
         this.pw = pw;
-        this.appointments = appointments;
+        this.appointments = new LinkedList<>();
     }
 
     public String getName() {
@@ -34,12 +35,12 @@ public class Calendar {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getPw() {
