@@ -1,6 +1,7 @@
 package at.htl.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class Calendar {
         this.name = name;
         this.description = description;
         this.pw = pw;
-        this.appointments = new LinkedList<>();
+        this.appointments = new ArrayList<>();
     }
 
     public String getName() {
