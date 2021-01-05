@@ -39,6 +39,10 @@ public class CalendarEndpoint {
 
     @POST
     public Response addCalendar(Calendar calendar) {
+        if (cr.findByName(calendar.getName()) != null) {
+            return Response.status(409).entity("Calendar already exists").build();
+        }
+
         cr.persist(calendar);
         return Response.ok(calendar).build();
     }

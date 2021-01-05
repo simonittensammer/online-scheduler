@@ -4,7 +4,7 @@ GET http://localhost:8080/calendar
 
 ###
 
-GET http://localhost:8080/calendar/Calendar1
+GET http://localhost:8080/calendar/Calendar2
 
 ###
 
