@@ -6,8 +6,10 @@
 
 <div class="content">
   <div class="searchInputWrapper">
-    <label for="searchBar">Search for a Calendar</label>
-    <input #input class="searchBar" id="searchBar" type="text" placeholder="search..." [(ngModel)]="searchQuery">
+    <mat-form-field appearance="outline">
+      <mat-label>Search for a Calendar</mat-label>
+      <input matInput #input class="searchBar" id="searchBar" type="text" placeholder="search..." [(ngModel)]="searchQuery">
+    </mat-form-field>
   </div>
 
   <div class="calendarListWrapper">

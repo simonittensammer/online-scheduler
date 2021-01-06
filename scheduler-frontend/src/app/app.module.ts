@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CalendarListComponent } from './calendar-list/calendar-list.component';
 import {FormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
