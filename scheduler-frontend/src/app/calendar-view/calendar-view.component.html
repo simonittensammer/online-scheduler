@@ -18,7 +18,9 @@
 
 <div class="content">
   <div class="calendarListWrapper">
-    <ng-container *ngFor="let appointment of calendar.appointments">
+    <ng-container *ngFor="let appointment of calendar.appointments; let i = index;">
+      <span class="newDateHeadline" *ngIf="i==0 || i > 0 && calendar.appointments[i-1].title != appointment.title">{{ appointment.title }}</span> <!-- REMINDER: replace with date comparison -->
+
       <mat-card>
         <mat-card-title>{{ appointment.title }}</mat-card-title>
         <mat-card-subtitle>{{ appointment.description }}</mat-card-subtitle>

@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDividerModule} from '@angular/material/divider';
 import { CalendarViewComponent } from './calendar-view/calendar-view.component';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { CalendarViewComponent } from './calendar-view/calendar-view.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
