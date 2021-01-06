@@ -34,7 +34,7 @@ export class CalendarListComponent implements OnInit {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = 'serverurl.com' + this.router.url;
+    selBox.value = 'https://simonittensammer.github.io/online-scheduler' + this.router.url;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
