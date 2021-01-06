@@ -25,4 +25,18 @@ export class CalendarListComponent implements OnInit {
   viewCalendar(calendar: Calendar): void {
     this.router.navigate(['calendar', calendar.name]);
   }
+
+  copyUrl(): void{
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = 'serverurl.com' + this.router.url;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+  }
 }
