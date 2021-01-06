@@ -10,12 +10,17 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+mat-toolbar {
+  position: fixed;
+  z-index: 999;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
 
 .content {
-  padding: 2.5vh 7.5vw;
+  padding: 72px 7.5vw 2.5vh 7.5vw;
 }
 
 .newDateHeadline {
@@ -27,7 +32,7 @@ body {
   padding-top: 1em;
 }
 
-.calendarListWrapper, .searchInputWrapper {
+.calendarListWrapper, .searchInputWrapper, .appointmentListWrapper {
   width: 100%;
 
   display: grid;

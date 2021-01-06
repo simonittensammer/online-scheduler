@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {CalendarService} from '../services/calendar.service';
 import {Calendar} from '../models/calendar';
@@ -27,7 +27,6 @@ export class CalendarViewComponent implements OnInit {
         .pipe(first())
         .subscribe(value => {
           this.calendar = value;
-          console.log(this.calendar);
         });
     });
   }
