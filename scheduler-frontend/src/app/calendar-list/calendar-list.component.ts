@@ -23,6 +23,6 @@ export class CalendarListComponent implements OnInit {
   }
 
   viewCalendar(calendar: Calendar): void {
-    this.router.navigate(['calendar-view']);
+    this.router.navigate(['calendar', calendar.name]);
   }
 }

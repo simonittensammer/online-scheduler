@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CalendarListComponent
   },
   {
-    path: 'calendar-view',
+    path: 'calendar/:name',
     component: CalendarViewComponent
   }
 ];
