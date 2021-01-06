@@ -2,19 +2,27 @@
     <span>
       Calendars
     </span>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button class="icon">
+    <mat-icon>share</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div class="content">
   <div class="searchInputWrapper">
     <mat-form-field appearance="outline">
       <mat-label>Search for a Calendar</mat-label>
-      <input matInput #input class="searchBar" id="searchBar" type="text" placeholder="search..." [(ngModel)]="searchQuery">
+      <input matInput #input class="searchBar" id="searchBar" type="text" placeholder="search..."
+             [(ngModel)]="searchQuery">
     </mat-form-field>
   </div>
 
   <div class="calendarListWrapper">
     <ng-container *ngFor="let calendar of calendarService.calendarList">
-      <mat-card *ngIf="searchQuery == '' || (calendar.name | uppercase).includes(searchQuery | uppercase)" (click)="viewCalendar(calendar)">
+      <mat-card *ngIf="searchQuery == '' || (calendar.name | uppercase).includes(searchQuery | uppercase)"
+                (click)="viewCalendar(calendar)">
         <mat-card-title>{{ calendar.name }}</mat-card-title>
         <mat-card-subtitle>{{ calendar.description }}</mat-card-subtitle>
       </mat-card>

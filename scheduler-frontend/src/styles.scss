@@ -10,6 +10,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.spacer {
+  flex: 1 1 auto;
+}
+
 .content {
   padding: 2.5vh 7.5vw;
 }
