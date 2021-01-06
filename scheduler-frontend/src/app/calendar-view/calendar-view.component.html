@@ -1,11 +1,17 @@
 <mat-toolbar color="primary">
-    <span>
-      Calendars
-    </span>
+  <button mat-icon-button class="icon" routerLink="">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>
+      {{ calendar.name }}
+  </span>
 
   <span class="spacer"></span>
 
   <button mat-icon-button class="icon" (click)="copyUrl()">
     <mat-icon>share</mat-icon>
+  </button>
+  <button mat-icon-button class="icon">
+    <mat-icon>edit</mat-icon>
   </button>
 </mat-toolbar>
