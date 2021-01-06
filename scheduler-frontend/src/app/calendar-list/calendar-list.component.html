@@ -10,9 +10,9 @@
   </div>
 
   <div class="calendarListWrapper">
-    <mat-card>
-      <mat-card-title>Calendar-Title</mat-card-title>
-      <mat-card-subtitle>Calendar-Subtitle</mat-card-subtitle>
+    <mat-card *ngFor="let calendar of calendarService.calendarList">
+      <mat-card-title>{{ calendar.name }}</mat-card-title>
+      <mat-card-subtitle>{{ calendar.description }}</mat-card-subtitle>
     </mat-card>
   </div>
 </div>
