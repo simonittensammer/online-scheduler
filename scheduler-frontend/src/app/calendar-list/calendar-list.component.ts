@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CalendarService} from '../services/calendar.service';
 import {Router} from '@angular/router';
 import {Calendar} from '../models/calendar';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-calendar-list',
@@ -13,7 +14,8 @@ export class CalendarListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public calendarService: CalendarService
+    public calendarService: CalendarService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -38,5 +40,7 @@ export class CalendarListComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+
+    this.snackBar.open('Link copied!', 'Done', {duration: 2500});
   }
 }

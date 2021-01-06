@@ -12,6 +12,7 @@ import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CalendarViewComponent } from './calendar-view/calendar-view.component';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CalendarViewComponent } from './calendar-view/calendar-view.component';
     FormsModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
