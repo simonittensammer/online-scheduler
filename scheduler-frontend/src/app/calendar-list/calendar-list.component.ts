@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CalendarService} from '../services/calendar.service';
+import {Router} from '@angular/router';
+import {Calendar} from '../models/calendar';
 
 @Component({
   selector: 'app-calendar-list',
@@ -10,6 +12,7 @@ export class CalendarListComponent implements OnInit {
   searchQuery = '';
 
   constructor(
+    private router: Router,
     public calendarService: CalendarService
   ) { }
 
@@ -19,4 +22,7 @@ export class CalendarListComponent implements OnInit {
     });
   }
 
+  viewCalendar(calendar: Calendar): void {
+    this.router.navigate(['calendar-view']);
+  }
 }
