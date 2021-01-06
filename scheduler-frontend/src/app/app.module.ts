@@ -10,11 +10,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { CalendarListComponent } from './calendar-list/calendar-list.component';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { CalendarViewComponent } from './calendar-view/calendar-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendarListComponent
+    CalendarListComponent,
+    CalendarViewComponent
   ],
   imports: [
     HttpClientModule,
