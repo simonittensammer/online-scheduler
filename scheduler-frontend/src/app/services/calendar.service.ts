@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Calendar} from '../models/calendar';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,17 @@ export class CalendarService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
   getAllCalendars(): Observable<Array<Calendar>> {
     return this.http.get<Array<Calendar>>(this.SERVER_URL + 'calendar');
+  }
+
+  getCalendar(name: string): Observable<Calendar> {
+    return this.http.get<Calendar>(this.SERVER_URL + 'calendar/' + name)
+      .pipe(map(calendar => {
+        return calendar;
+      }));
   }
 }
