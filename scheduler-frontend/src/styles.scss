@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 html, body {
   height: 100%;
@@ -8,6 +8,11 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.pageWrapper {
+  width: 100vw;
+  min-height: 100vh;
 }
 
 mat-toolbar {
@@ -20,7 +25,7 @@ mat-toolbar {
 }
 
 .content {
-  padding: 72px 7.5vw 2.5vh 7.5vw;
+  padding: 88px 7.5vw 2.5vh 7.5vw;
 }
 
 .newDateHeadline {

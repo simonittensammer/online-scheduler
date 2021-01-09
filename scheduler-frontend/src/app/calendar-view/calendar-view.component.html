@@ -1,30 +1,34 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="icon" routerLink="">
-    <mat-icon>home</mat-icon>
-  </button>
-  <span>
+<div class="pageWrapper mat-app-background">
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="icon" routerLink="">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>
       {{ calendar.name }}
   </span>
 
-  <span class="spacer"></span>
+    <span class="spacer"></span>
 
-  <button mat-icon-button class="icon" (click)="copyUrl()">
-    <mat-icon>share</mat-icon>
-  </button>
-  <button mat-icon-button class="icon">
-    <mat-icon>edit</mat-icon>
-  </button>
-</mat-toolbar>
+    <button mat-icon-button class="icon" (click)="copyUrl()">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button class="icon">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-toolbar>
 
-<div #content class="content">
-  <div class="appointmentListWrapper">
-    <ng-container *ngFor="let appointment of calendar.appointments; let i = index;">
-      <span class="newDateHeadline" *ngIf="i==0 || i > 0 && calendar.appointments[i-1].title != appointment.title">{{ appointment.title }}</span> <!-- REMINDER: replace with date comparison -->
+  <div #content class="content">
+    <div class="appointmentListWrapper">
+      <ng-container *ngFor="let appointment of calendar.appointments; let i = index;">
+        <span class="newDateHeadline"
+              *ngIf="i==0 || i > 0 && calendar.appointments[i-1].title != appointment.title">{{ appointment.title }}</span>
+        <!-- REMINDER: replace with date comparison -->
 
-      <mat-card>
-        <mat-card-title>{{ appointment.title }}</mat-card-title>
-        <mat-card-subtitle>{{ appointment.description }}</mat-card-subtitle>
-      </mat-card>
-    </ng-container>
+        <mat-card>
+          <mat-card-title>{{ appointment.title }}</mat-card-title>
+          <mat-card-subtitle>{{ appointment.description }}</mat-card-subtitle>
+        </mat-card>
+      </ng-container>
+    </div>
   </div>
 </div>
