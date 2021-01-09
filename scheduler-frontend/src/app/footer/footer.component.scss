@@ -1,0 +1,39 @@
+:host {
+  width: 100vw;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #222222;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerText {
+  display: inline;
+  position: relative;
+  padding: 0;
+  margin: 0 32px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 22px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.marginLeft {
+  padding-left: 32px;
+}
