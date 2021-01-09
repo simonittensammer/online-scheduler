@@ -15,12 +15,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDividerModule} from '@angular/material/divider';
 import { CalendarViewComponent } from './calendar-view/calendar-view.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarListComponent,
-    CalendarViewComponent
+    CalendarViewComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,
