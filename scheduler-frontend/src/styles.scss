@@ -3,6 +3,7 @@
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,7 +26,7 @@ mat-toolbar {
 }
 
 .content {
-  padding: 88px 7.5vw 2.5vh 7.5vw;
+  padding: 88px 7.5vw;
 }
 
 .newDateHeadline {
