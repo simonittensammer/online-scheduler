@@ -12,6 +12,8 @@ import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Path("/appointment")
@@ -37,7 +39,10 @@ public class AppointmentEndpoint {
         String calendarName = jsonObject.getString("calendarName");
         Appointment appointment = new Appointment(
                 jsonObject.getJsonObject("appointment").getString("title"),
-                jsonObject.getJsonObject("appointment").getString("description")
+                jsonObject.getJsonObject("appointment").getString("description"),
+                LocalDate.parse(jsonObject.getJsonObject("appointment").getString("date")),
+                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("start")),
+                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("end"))
         );
 
         ar.persist(appointment);

@@ -30,7 +30,10 @@ Content-Type: application/json
   "calendarName": "Calendar1",
   "appointment": {
     "title": "Appointment 1",
-    "description": "Test Description"
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "start": "01:02:03",
+    "end": "04:05:06"
   }
 }
 
