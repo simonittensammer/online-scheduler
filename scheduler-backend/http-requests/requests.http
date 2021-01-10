@@ -32,8 +32,8 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
