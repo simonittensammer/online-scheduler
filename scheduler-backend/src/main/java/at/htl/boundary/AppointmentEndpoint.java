@@ -41,8 +41,8 @@ public class AppointmentEndpoint {
                 jsonObject.getJsonObject("appointment").getString("title"),
                 jsonObject.getJsonObject("appointment").getString("description"),
                 LocalDate.parse(jsonObject.getJsonObject("appointment").getString("date")),
-                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("start")),
-                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("end"))
+                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("startTime")),
+                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("endTime"))
         );
 
         ar.persist(appointment);
