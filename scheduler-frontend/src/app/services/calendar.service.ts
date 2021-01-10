@@ -10,6 +10,7 @@ import {map} from 'rxjs/operators';
 export class CalendarService {
   SERVER_URL = 'http://localhost:8080/';
 
+  calendar!: Calendar;
   calendarList: Array<Calendar> = [];
 
   constructor(
@@ -26,5 +27,9 @@ export class CalendarService {
       .pipe(map(calendar => {
         return calendar;
       }));
+  }
+
+  createCalendar(calendar: Calendar): Observable<Calendar> {
+    return this.http.post<Calendar>(this.SERVER_URL + 'calendar', calendar);
   }
 }

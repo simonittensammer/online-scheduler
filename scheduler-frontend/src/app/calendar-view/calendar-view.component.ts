@@ -11,7 +11,6 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./calendar-view.component.scss']
 })
 export class CalendarViewComponent implements OnInit {
-  calendar!: Calendar;
 
   constructor(
     private route: ActivatedRoute,
@@ -26,7 +25,7 @@ export class CalendarViewComponent implements OnInit {
       this.calendarService.getCalendar(params.name)
         .pipe(first())
         .subscribe(value => {
-          this.calendar = value;
+          this.calendarService.calendar = value;
         });
     });
   }
