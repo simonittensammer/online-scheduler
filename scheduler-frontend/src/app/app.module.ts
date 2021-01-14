@@ -17,6 +17,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CalendarFormComponent } from './pages/calendar-form/calendar-form.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CalendarFormComponent } from './pages/calendar-form/calendar-form.compo
     CalendarListComponent,
     CalendarViewComponent,
     FooterComponent,
-    CalendarFormComponent
+    CalendarFormComponent,
+    HeaderComponent
   ],
   imports: [
     HttpClientModule,

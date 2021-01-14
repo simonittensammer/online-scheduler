@@ -1,22 +1,4 @@
 <div class="pageWrapper mat-app-background">
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="icon" routerLink="">
-      <mat-icon>home</mat-icon>
-    </button>
-    <span>
-      {{ calendarService.calendar.name }}
-  </span>
-
-    <span class="spacer"></span>
-
-    <button mat-icon-button class="icon" (click)="copyUrl()">
-      <mat-icon>share</mat-icon>
-    </button>
-    <button mat-icon-button class="icon">
-      <mat-icon>edit</mat-icon>
-    </button>
-  </mat-toolbar>
-
   <div #content class="content">
     <div class="appointmentListWrapper">
       <ng-container *ngFor="let appointment of calendarService.calendar.appointments; let i = index;">
@@ -31,6 +13,4 @@
       </ng-container>
     </div>
   </div>
-
-  <app-footer></app-footer>
 </div>

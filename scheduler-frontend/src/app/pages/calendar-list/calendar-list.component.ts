@@ -14,8 +14,7 @@ export class CalendarListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public calendarService: CalendarService,
-    private snackBar: MatSnackBar
+    public calendarService: CalendarService
   ) { }
 
   ngOnInit(): void {
@@ -26,21 +25,5 @@ export class CalendarListComponent implements OnInit {
 
   viewCalendar(calendar: Calendar): void {
     this.router.navigate(['calendar', calendar.name]);
-  }
-
-  copyUrl(): void{
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = 'https://simonittensammer.github.io/online-scheduler' + this.router.url;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
-
-    this.snackBar.open('Link copied!', 'Done', {duration: 2500});
   }
 }
