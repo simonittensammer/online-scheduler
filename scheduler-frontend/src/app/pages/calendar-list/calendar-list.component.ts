@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CalendarService} from '../services/calendar.service';
+import {CalendarService} from '../../services/calendar.service';
 import {Router} from '@angular/router';
-import {Calendar} from '../models/calendar';
+import {Calendar} from '../../models/calendar';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({

@@ -1,3 +1,266 @@
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Calendar3",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-14T191645.200.json
+
+###
+
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Calendar2",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-14T191642.200.json
+
+###
+
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Calendar1",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-14T191635.200.json
+
+###
+
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Itti's Kalender",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-11T011741.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Ile's Kalender",
+  "appointment": {
+    "title": "Geburtstag Küpfi",
+    "description": "Test Description",
+    "date": "2021-12-28",
+    "startTime": "12:37",
+    "endTime": "12:37"
+  }
+}
+
+<> 2021-01-11T011654.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Ile's Kalender",
+  "appointment": {
+    "title": "Geburtstag Küpfi",
+    "description": "Test Description",
+    "date": "2021-12-28",
+    "startTime": "23:37",
+    "endTime": "23:37"
+  }
+}
+
+<> 2021-01-11T011638.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Ile's Kalender",
+  "appointment": {
+    "title": "Geburtstag",
+    "description": "Test Description",
+    "date": "2021-06-22",
+    "startTime": "12:04",
+    "endTime": "12:34"
+  }
+}
+
+<> 2021-01-11T011528.200.json
+
+###
+
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Ile's Kalender",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-11T011406.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-17",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202736.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-23",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202732.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-09",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202728.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-10",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202725.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-08",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202720.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:01",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202516.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:07",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202458.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:07",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202452.200.json
+
+###
+
 POST http://localhost:8080/appointment
 Content-Type: application/json
 
@@ -12,32 +275,25 @@ Content-Type: application/json
   }
 }
 
-<> 2021-01-10T194218.200.json
+<> 2021-01-10T202446.200.json
 
 ###
 
-POST http://localhost:8080/calendar
+POST http://localhost:8080/appointment
 Content-Type: application/json
 
 {
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:04",
+    "endTime": "03:04"
+  }
 }
 
-<> 2021-01-10T194216.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T194212.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T193925.200.json
+<> 2021-01-10T202440.200.json
 
 ###
 
@@ -50,12 +306,12 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:04",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T193705.200.json
+<> 2021-01-10T202435.200.json
 
 ###
 
@@ -68,39 +324,7 @@ Content-Type: application/json
   "pw": "testpassword"
 }
 
-<> 2021-01-10T193701.409.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T193656.409.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T193650.200.json
-
-###
-
-GET http://localhost:8080/calendar/Calendar1
-
-<> 2021-01-10T190234.200.json
+<> 2021-01-10T202431.200.json
 
 ###
 
@@ -113,12 +337,12 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:04",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T190230.200.json
+<> 2021-01-10T202424.500.html
 
 ###
 
@@ -131,12 +355,102 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:04",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T190220.200.json
+<> 2021-01-10T202319.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202315.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202310.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202306.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "06:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202300.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "06:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202258.200.json
 
 ###
 
@@ -149,13 +463,97 @@ Content-Type: application/json
   "pw": "testpassword"
 }
 
-<> 2021-01-10T190218.200.json
+<> 2021-01-10T202253.200.json
 
 ###
 
-GET http://localhost:8080/calendar
+POST http://localhost:8080/appointment
+Content-Type: application/json
 
-<> 2021-01-10T190215.200.json
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "06:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202209.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:03",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202205.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:01",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202159.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202155.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-07",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202150.200.json
 
 ###
 
@@ -168,12 +566,30 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T190118.500.html
+<> 2021-01-10T202141.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202140.200.json
 
 ###
 
@@ -186,13 +602,7 @@ Content-Type: application/json
   "pw": "testpassword"
 }
 
-<> 2021-01-10T190115.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T190111.200.json
+<> 2021-01-10T202136.200.json
 
 ###
 
@@ -205,12 +615,12 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
+    "startTime": "01:01",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T190046.500.html
+<> 2021-01-10T202123.500.html
 
 ###
 
@@ -223,12 +633,84 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T190039.500.html
+<> 2021-01-10T202020.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202016.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202015.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202010.200.json
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-05",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T202007.200.json
 
 ###
 
@@ -241,19 +723,7 @@ Content-Type: application/json
   "pw": "testpassword"
 }
 
-<> 2021-01-10T190036.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T190033.200.json
-
-###
-
-GET http://localhost:8080/calendar/Calendar1
-
-<> 2021-01-10T185858.200.json
+<> 2021-01-10T202006.200.json
 
 ###
 
@@ -266,35 +736,66 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T185830.200.json
+<> 2021-01-10T200653.200.json
 
 ###
 
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T185826.200.json
-
-###
-
-POST http://localhost:8080/calendar
+POST http://localhost:8080/appointment
 Content-Type: application/json
 
 {
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
 }
 
-<> 2021-01-10T185823.200.json
+<> 2021-01-10T200633.200.json
 
 ###
 
-GET http://localhost:8080/calendar/Calendar1
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "6.1.2021",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T200626.500.html
+
+###
+
+POST http://localhost:8080/appointment
+Content-Type: application/json
+
+{
+  "calendarName": "Calendar1",
+  "appointment": {
+    "title": "Appointment 1",
+    "description": "Test Description",
+    "date": "2021-01-06",
+    "startTime": "01:02",
+    "endTime": "03:04"
+  }
+}
+
+<> 2021-01-10T194704.200.json
 
 ###
 
@@ -307,12 +808,12 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T185521.200.json
+<> 2021-01-10T194549.200.json
 
 ###
 
@@ -325,36 +826,12 @@ Content-Type: application/json
     "title": "Appointment 1",
     "description": "Test Description",
     "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
+    "startTime": "01:02",
+    "endTime": "03:04"
   }
 }
 
-<> 2021-01-10T185435.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T185431.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
-  }
-}
-
-<> 2021-01-10T185422.200.json
+<> 2021-01-10T194547.200.json
 
 ###
 
@@ -367,212 +844,7 @@ Content-Type: application/json
   "pw": "testpassword"
 }
 
-<> 2021-01-10T185418.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:02:03",
-    "endTime": "04:05:06"
-  }
-}
-
-<> 2021-01-10T185358.500.html
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T185326.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T185316.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T184811.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
-  }
-}
-
-<> 2021-01-10T184808.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
-  }
-}
-
-<> 2021-01-10T184800.200.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T184755.200.json
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T184752.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
-  }
-}
-
-<> 2021-01-10T184147.500.html
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T184145.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "start": "01:02:03",
-    "end": "04:05:06"
-  }
-}
-
-<> 2021-01-10T184101.500.html
-
-###
-
-GET http://localhost:8080/calendar
-
-<> 2021-01-10T184018.500.html
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T184012.200.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-09T230456.409.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-09T230453.409.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-09T230452.200.json
+<> 2021-01-10T194544.200.json
 
 ###
 

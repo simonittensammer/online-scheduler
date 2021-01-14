@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
-import {CalendarService} from '../services/calendar.service';
-import {Calendar} from '../models/calendar';
+import {CalendarService} from '../../services/calendar.service';
+import {Calendar} from '../../models/calendar';
 import {first} from 'rxjs/operators';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
