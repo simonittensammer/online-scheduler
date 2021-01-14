@@ -1,10 +1,14 @@
 <mat-toolbar color="primary">
   <button mat-icon-button class="icon" routerLink="">
-    <mat-icon>home</mat-icon>
+    <mat-icon>calendar_today</mat-icon>
   </button>
-  <span>
+  <span *ngIf="calendarService.calendar == null">
       Calendars
-    </span>
+  </span>
+
+  <span *ngIf="calendarService.calendar != null">
+      {{ calendarService.calendar.name }}
+  </span>
 
   <span class="spacer"></span>
 

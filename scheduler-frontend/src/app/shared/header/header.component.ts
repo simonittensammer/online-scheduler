@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {CalendarService} from '../../services/calendar.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    public calendarService: CalendarService
   ) { }
 
   ngOnInit(): void {

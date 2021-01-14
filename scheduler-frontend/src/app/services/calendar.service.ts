@@ -10,7 +10,7 @@ import {map} from 'rxjs/operators';
 export class CalendarService {
   SERVER_URL = 'http://localhost:8080/';
 
-  calendar!: Calendar;
+  calendar!: Calendar | null;
   calendarList: Array<Calendar> = [];
 
   constructor(

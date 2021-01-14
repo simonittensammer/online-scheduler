@@ -21,6 +21,7 @@ export class CalendarListComponent implements OnInit {
     this.calendarService.getAllCalendars().subscribe(value => {
       this.calendarService.calendarList = value;
     });
+    this.calendarService.calendar = null;
   }
 
   viewCalendar(calendar: Calendar): void {
