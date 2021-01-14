@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {CalendarViewComponent} from './pages/calendar-view/calendar-view.component';
 import {CalendarListComponent} from './pages/calendar-list/calendar-list.component';
+import {CalendarFormComponent} from './pages/calendar-form/calendar-form.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'calendar/:name',
     component: CalendarViewComponent
+  },
+  {
+    path: 'calendarSettings',
+    component: CalendarFormComponent
   }
 ];
 

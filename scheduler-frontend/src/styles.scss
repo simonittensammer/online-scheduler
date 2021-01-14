@@ -50,3 +50,12 @@ mat-toolbar {
 mat-card {
   cursor: pointer;
 }
+
+form {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 500px;
+  max-width: 100%;
+}
