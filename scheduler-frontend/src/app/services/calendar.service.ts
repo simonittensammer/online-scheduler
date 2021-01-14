@@ -32,4 +32,8 @@ export class CalendarService {
   createCalendar(calendar: Calendar): Observable<Calendar> {
     return this.http.post<Calendar>(this.SERVER_URL + 'calendar', calendar);
   }
+
+  updateCalendar(calendar: Calendar): Observable<Calendar> {
+    return this.http.put<Calendar>(this.SERVER_URL + 'calendar', calendar);
+  }
 }
