@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-calendar-form',
@@ -11,7 +12,10 @@ export class CalendarFormComponent implements OnInit {
 
   calendarForm!: FormGroup;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
     this.calendarForm = new FormGroup({
@@ -20,5 +24,13 @@ export class CalendarFormComponent implements OnInit {
       pw: new FormControl('', Validators.required),
       confirmPw: new FormControl('', Validators.required)
     });
+  }
+
+  saveCalendar(): void {
+
+  }
+
+  cancel(): void {
+    this.location.back();
   }
 }
