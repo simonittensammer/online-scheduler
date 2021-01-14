@@ -1,3 +1,9 @@
+GET http://localhost:8080/calendar
+
+<> 2021-01-14T211654.200.json
+
+###
+
 POST http://localhost:8080/calendar
 Content-Type: application/json
 
@@ -832,19 +838,6 @@ Content-Type: application/json
 }
 
 <> 2021-01-10T194547.200.json
-
-###
-
-POST http://localhost:8080/calendar
-Content-Type: application/json
-
-{
-  "name": "Calendar1",
-  "description": "Test Description",
-  "pw": "testpassword"
-}
-
-<> 2021-01-10T194544.200.json
 
 ###
 

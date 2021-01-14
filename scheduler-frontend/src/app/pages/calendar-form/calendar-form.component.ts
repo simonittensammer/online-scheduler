@@ -27,7 +27,7 @@ export class CalendarFormComponent implements OnInit {
     });
   }
 
-  saveCalendar(): void {
+  saveCalendar(): void { // REMINDER: add feature if calendar is edited and not created
     this.calendarService.createCalendar(this.calendarForm.value).subscribe(value => {
       this.calendarService.calendarList.push(value);
       this.location.back();
