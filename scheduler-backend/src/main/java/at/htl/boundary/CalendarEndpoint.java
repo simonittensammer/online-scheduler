@@ -46,4 +46,10 @@ public class CalendarEndpoint {
         cr.persist(calendar);
         return Response.ok(calendar).build();
     }
+
+    @PUT
+    public Response putCam(Calendar calendar) {
+        cr.update(calendar);
+        return Response.ok(calendar).build();
+    }
 }
