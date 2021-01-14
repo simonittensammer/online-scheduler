@@ -15,7 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDividerModule} from '@angular/material/divider';
 import { CalendarViewComponent } from './pages/calendar-view/calendar-view.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { CalendarFormComponent } from './pages/calendar-form/calendar-form.component';
 
 @NgModule({
