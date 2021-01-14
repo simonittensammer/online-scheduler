@@ -60,10 +60,15 @@ mat-card {
 }
 
 form {
-  width: 100%;
+  width: 500px;
+  max-width: 100%;
 }
 
 mat-form-field {
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+}
+
+.formButton {
+  float: right;
+  margin-left: 16px !important;
 }
