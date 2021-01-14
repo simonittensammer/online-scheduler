@@ -5,30 +5,30 @@
     <form [formGroup]="calendarForm">
       <mat-form-field appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput type="text" placeholder="Name">
+        <input matInput type="text" formControlName="name" placeholder="Name">
       </mat-form-field>
       <br>
 
       <mat-form-field appearance="outline">
         <mat-label>Description</mat-label>
-        <textarea matInput type="text" placeholder="Description"></textarea>
+        <textarea matInput type="text" formControlName="description" placeholder="Description"></textarea>
       </mat-form-field>
       <br>
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput type="text" placeholder="Password">
+        <input matInput type="text" formControlName="pw" placeholder="Password">
       </mat-form-field>
       <br>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Confirm Password</mat-label>
-        <input matInput type="text" placeholder="Confirm Password">
-      </mat-form-field>
-      <br>
+<!--      <mat-form-field appearance="outline">-->
+<!--        <mat-label>Confirm Password</mat-label>-->
+<!--        <input matInput type="text" placeholder="Confirm Password">-->
+<!--      </mat-form-field>-->
+<!--      <br>-->
 
       <button mat-raised-button color="primary" class="formButton" (click)="saveCalendar()">Save Calendar</button>
-      <button mat-raised-button class="formButton" (click)="cancel()">Cancel</button>
+      <button mat-raised-button class="formButton" (click)="goBack()">Cancel</button>
     </form>
   </div>
 </div>
