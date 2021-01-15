@@ -5,7 +5,7 @@
     <form [formGroup]="appointmentForm">
       <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
-        <input matInput type="text" formControlName="title" placeholder="Title">
+        <input matInput type="text" formControlName="title" placeholder="Title" placeholder="e.g. Birthday! \(*ᵕ*)/">
       </mat-form-field>
       <br>
 
@@ -17,23 +17,22 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Date</mat-label>
-        <input matInput [matDatepicker]="picker">
+        <input matInput [matDatepicker]="picker" placeholder="e.g. 1/15/2021">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
       <br>
 
-      <!--      <mat-form-field appearance="outline">-->
-      <!--        <mat-label>Start Time</mat-label>-->
-      <!--        <textarea matInput type="time" formControlName="startTime" placeholder="Start Time"></textarea>-->
-      <!--      </mat-form-field>-->
-      <!--      <br>-->
+      <mat-form-field appearance="outline">
+        <mat-label>From</mat-label>
+        <input matInput type="text" formControlName="startTime" placeholder="e.g. 13:15">
+      </mat-form-field>
 
-      <!--      <mat-form-field appearance="outline">-->
-      <!--        <mat-label>End Time</mat-label>-->
-      <!--        <textarea matInput type="time" formControlName="endTime" placeholder="End Time"></textarea>-->
-      <!--      </mat-form-field>-->
-      <!--      <br>-->
+      <mat-form-field appearance="outline">
+        <mat-label>To</mat-label>
+        <input matInput type="text" formControlName="endTime" placeholder="e.g. 13:45">
+      </mat-form-field>
+      <br>
 
       <button mat-raised-button color="primary" class="formButton" (click)="saveAppointment()">Save Appointment</button>
       <button mat-raised-button class="formButton" (click)="goBack()">Cancel</button>
