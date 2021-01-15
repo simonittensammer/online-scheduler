@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {CalendarService} from '../../services/calendar.service';
 import {Calendar} from '../../models/calendar';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private snackBar: MatSnackBar,
-    public calendarService: CalendarService
+    public calendarService: CalendarService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +37,6 @@ export class HeaderComponent implements OnInit {
   }
 
   showCalendarSettings(calendar: Calendar): void {
-
+    this.router.navigate(['calendarSettings', calendar.name]);
   }
 }

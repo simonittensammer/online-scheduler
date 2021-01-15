@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CalendarViewComponent
   },
   {
-    path: 'calendarSettings',
+    path: 'calendarSettings/:name',
     component: CalendarFormComponent
   }
 ];

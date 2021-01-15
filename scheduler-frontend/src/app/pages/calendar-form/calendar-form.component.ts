@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {CalendarService} from '../../services/calendar.service';
 
@@ -15,9 +15,11 @@ export class CalendarFormComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private location: Location,
     public calendarService: CalendarService
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
     this.calendarForm = new FormGroup({
@@ -25,6 +27,10 @@ export class CalendarFormComponent implements OnInit {
       description: new FormControl(),
       pw: new FormControl('', Validators.required)
     });
+
+    if (this.calendarService.calendar) {
+      this.calendarForm.patchValue(this.calendarService.calendar);
+    }
   }
 
   saveCalendar(): void { // REMINDER: add feature if calendar is edited and not created

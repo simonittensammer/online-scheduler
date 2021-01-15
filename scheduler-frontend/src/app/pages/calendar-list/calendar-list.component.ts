@@ -27,4 +27,8 @@ export class CalendarListComponent implements OnInit {
   viewCalendar(calendar: Calendar): void {
     this.router.navigate(['calendar', calendar.name]);
   }
+
+  showCalendarSettings(): void {
+    this.router.navigate(['calendarSettings', '']);
+  }
 }
