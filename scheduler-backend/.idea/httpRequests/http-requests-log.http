@@ -1,3 +1,50 @@
+POST http://localhost:8080/calendar/Calendar1/addAppointment
+Content-Type: application/json
+
+{
+  "title": "Appointment 1",
+  "description": "Test Description",
+  "date": "2021-01-05",
+  "startTime": "01:02",
+  "endTime": "03:04"
+}
+
+<> 2021-01-15T155049.200.json
+
+###
+
+POST http://localhost:8080/Calendar1/addAppointment
+Content-Type: application/json
+
+{
+  "title": "Appointment 1",
+  "description": "Test Description",
+  "date": "2021-01-05",
+  "startTime": "01:02",
+  "endTime": "03:04"
+}
+
+###
+
+POST http://localhost:8080/calendar
+Content-Type: application/json
+
+{
+  "name": "Calendar1",
+  "description": "Test Description",
+  "pw": "testpassword"
+}
+
+<> 2021-01-15T155013.200.json
+
+###
+
+GET http://localhost:8080/calendar
+
+<> 2021-01-15T155008.200.json
+
+###
+
 GET http://localhost:8080/calendar
 
 <> 2021-01-14T211654.200.json
@@ -766,78 +813,6 @@ Content-Type: application/json
 }
 
 <> 2021-01-10T200633.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "6.1.2021",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T200626.500.html
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-06",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T194704.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T194549.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T194547.200.json
 
 ###
 

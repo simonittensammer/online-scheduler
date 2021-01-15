@@ -34,28 +34,28 @@ public class AppointmentEndpoint {
         return ar.listAll();
     }
 
-    @POST
-    public Response addAppointment(JsonObject jsonObject) {
-        String calendarName = jsonObject.getString("calendarName");
-        Appointment appointment = new Appointment(
-                jsonObject.getJsonObject("appointment").getString("title"),
-                jsonObject.getJsonObject("appointment").getString("description"),
-                LocalDate.parse(jsonObject.getJsonObject("appointment").getString("date")),
-                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("startTime")),
-                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("endTime"))
-        );
-
-        ar.persist(appointment);
-
-        Calendar calendar = cr.findByName(calendarName);
-        List<Appointment> appointments = calendar.getAppointments();
-        appointments.add(appointment);
-        calendar.setAppointments(appointments);
-
-        cr.update(calendar);
-
-        return Response.ok(appointment).build();
-    }
+//    @POST
+//    public Response addAppointment(JsonObject jsonObject) {
+//        String calendarName = jsonObject.getString("calendarName");
+//        Appointment appointment = new Appointment(
+//                jsonObject.getJsonObject("appointment").getString("title"),
+//                jsonObject.getJsonObject("appointment").getString("description"),
+//                LocalDate.parse(jsonObject.getJsonObject("appointment").getString("date")),
+//                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("startTime")),
+//                LocalTime.parse(jsonObject.getJsonObject("appointment").getString("endTime"))
+//        );
+//
+//        ar.persist(appointment);
+//
+//        Calendar calendar = cr.findByName(calendarName);
+//        List<Appointment> appointments = calendar.getAppointments();
+//        appointments.add(appointment);
+//        calendar.setAppointments(appointments);
+//
+//        cr.update(calendar);
+//
+//        return Response.ok(appointment).build();
+//    }
 
     @DELETE
     @Path("/{id}")
