@@ -81,6 +81,17 @@ mat-form-field {
   width: 100%;
 }
 
+.halfWidthInput {
+  width: 47.5%;
+  float: left;
+}
+
+.halfWidthInputDivider {
+  width: 5%;
+  height: 32px;
+  float: left;
+}
+
 .formButton {
   float: right;
   margin-left: 16px !important;
