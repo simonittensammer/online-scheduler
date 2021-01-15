@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Location} from '@angular/common';
+import {CalendarService} from '../../services/calendar.service';
 
 @Component({
   selector: 'app-appointment-form',
@@ -12,7 +13,8 @@ export class AppointmentFormComponent implements OnInit {
   appointmentForm!: FormGroup;
 
   constructor(
-    private location: Location
+    private location: Location,
+    public calendarService: CalendarService
   ) { }
 
   ngOnInit(): void {
@@ -26,7 +28,9 @@ export class AppointmentFormComponent implements OnInit {
   }
 
   saveAppointment(): void {
-
+    this.calendarService.addAppointment(this.appointmentForm.value).subscribe(value => {
+      this.calendarService.calendar?.appointments.push(value);
+    });
   }
 
   goBack(): void {

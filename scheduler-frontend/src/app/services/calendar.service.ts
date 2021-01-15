@@ -3,6 +3,7 @@ import {Calendar} from '../models/calendar';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {Appointment} from '../models/appointment';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,9 @@ export class CalendarService {
 
   updateCalendar(calendar: Calendar): Observable<Calendar> {
     return this.http.put<Calendar>(this.SERVER_URL + 'calendar', calendar);
+  }
+
+  addAppointment(appointment: Appointment): Observable<Appointment> {
+    return this.http.post<Appointment>(this.SERVER_URL + 'calendar/' + this.calendar?.name + '/addAppointment', appointment);
   }
 }

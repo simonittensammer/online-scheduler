@@ -16,7 +16,9 @@ import javax.ws.rs.core.Response;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 @Path("/calendar")
@@ -58,10 +60,12 @@ public class CalendarEndpoint {
     @POST
     @Path("/{name}/addAppointment")
     public Response addAppointment(@PathParam("name") String name, JsonObject jsonObject) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
+
         Appointment appointment = new Appointment(
                 jsonObject.getString("title"),
                 jsonObject.getString("description"),
-                LocalDateTime.parse(jsonObject.getString("date")),
+                LocalDateTime.parse(jsonObject.getString("date"), formatter),
                 LocalTime.parse(jsonObject.getString("startTime")),
                 LocalTime.parse(jsonObject.getString("endTime"))
         );

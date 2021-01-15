@@ -23,7 +23,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/calendar/asdf/addAppointment
+POST http://localhost:8080/calendar/Calendar1/addAppointment
 Content-Type: application/json
 
 {
