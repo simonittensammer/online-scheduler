@@ -18,6 +18,9 @@ import { CalendarViewComponent } from './pages/calendar-view/calendar-view.compo
 import { FooterComponent } from './shared/footer/footer.component';
 import { CalendarFormComponent } from './pages/calendar-form/calendar-form.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { AppointmentFormComponent } from './pages/appointment-form/appointment-form.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { HeaderComponent } from './shared/header/header.component';
     CalendarViewComponent,
     FooterComponent,
     CalendarFormComponent,
-    HeaderComponent
+    HeaderComponent,
+    AppointmentFormComponent
   ],
   imports: [
     HttpClientModule,
@@ -41,6 +45,8 @@ import { HeaderComponent } from './shared/header/header.component';
     MatIconModule,
     MatSnackBarModule,
     MatDividerModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     ReactiveFormsModule
   ],
   providers: [],

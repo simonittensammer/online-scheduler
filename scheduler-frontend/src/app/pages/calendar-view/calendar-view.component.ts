@@ -45,4 +45,8 @@ export class CalendarViewComponent implements OnInit {
 
     this.snackBar.open('Link copied!', 'Done', {duration: 2500});
   }
+
+  showAppointmentSettings(): void {
+    this.router.navigate(['appointmentSettings', '']);
+  }
 }
