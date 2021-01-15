@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {CalendarService} from '../../services/calendar.service';
+import {Calendar} from '../../models/calendar';
 
 @Component({
   selector: 'app-calendar-form',
@@ -30,14 +31,30 @@ export class CalendarFormComponent implements OnInit {
 
     if (this.calendarService.calendar) {
       this.calendarForm.patchValue(this.calendarService.calendar);
+      this.calendarForm.get('name')?.disable();
     }
   }
 
   saveCalendar(): void { // REMINDER: add feature if calendar is edited and not created
-    this.calendarService.createCalendar(this.calendarForm.value).subscribe(value => {
-      this.calendarService.calendarList.push(value);
-      this.location.back();
-    });
+    if (this.calendarService.calendar) {
+      const updatedCalendar = new Calendar(
+        this.calendarService.calendar.name,
+        this.calendarForm.value.description,
+        this.calendarForm.value.pw,
+        this.calendarService.calendar.appointments
+      );
+      this.calendarService.updateCalendar(updatedCalendar).subscribe(value => {
+        this.calendarService.getAllCalendars().subscribe(value2 => {
+          this.calendarService.calendarList = value2;
+          this.location.back();
+        });
+      });
+    } else {
+      this.calendarService.createCalendar(this.calendarForm.value).subscribe(value => {
+        this.calendarService.calendarList.push(value);
+        this.location.back();
+      });
+    }
   }
 
   goBack(): void {
