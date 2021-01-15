@@ -30,6 +30,7 @@ export class AppointmentFormComponent implements OnInit {
   saveAppointment(): void {
     this.calendarService.addAppointment(this.appointmentForm.value).subscribe(value => {
       this.calendarService.calendar?.appointments.push(value);
+      this.location.back();
     });
   }
 

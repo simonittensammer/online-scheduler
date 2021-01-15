@@ -65,7 +65,7 @@ public class CalendarEndpoint {
         Appointment appointment = new Appointment(
                 jsonObject.getString("title"),
                 jsonObject.getString("description"),
-                LocalDateTime.parse(jsonObject.getString("date"), formatter),
+                LocalDateTime.parse(jsonObject.getString("date"), formatter).plusDays(1),
                 LocalTime.parse(jsonObject.getString("startTime")),
                 LocalTime.parse(jsonObject.getString("endTime"))
         );
