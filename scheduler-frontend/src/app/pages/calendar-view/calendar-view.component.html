@@ -11,6 +11,14 @@
           <mat-card-content>{{ appointment.start }} - {{ appointment.end }}</mat-card-content>
         </mat-card>
       </ng-container>
+
+      <ng-container *ngIf="calendarService.calendar.appointments.length == 0">
+        <mat-card>
+          <mat-card-title>No appointments yet</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+          <mat-card-content>To create a new appointment, click the button in the lower right corner!</mat-card-content>
+        </mat-card>
+      </ng-container>
     </div>
   </div>
 </div>
