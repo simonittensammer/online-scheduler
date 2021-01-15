@@ -12,6 +12,10 @@
 
   <span class="spacer"></span>
 
+
+  <button mat-icon-button *ngIf="calendarService.calendar != null" class="icon" (click)="showCalendarSettings(calendarService.calendar)">
+    <mat-icon>edit</mat-icon>
+  </button>
   <button mat-icon-button class="icon" (click)="copyUrl()">
     <mat-icon>share</mat-icon>
   </button>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {CalendarService} from '../../services/calendar.service';
+import {Calendar} from '../../models/calendar';
 
 @Component({
   selector: 'app-header',
@@ -31,5 +32,9 @@ export class HeaderComponent implements OnInit {
     document.body.removeChild(selBox);
 
     this.snackBar.open('Link copied!', 'Done', {duration: 2500});
+  }
+
+  showCalendarSettings(calendar: Calendar): void {
+
   }
 }
