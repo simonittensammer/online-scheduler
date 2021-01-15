@@ -1,3 +1,33 @@
+POST http://localhost:8080/calendar/asdf/addAppointment
+Content-Type: application/json
+
+{
+  "title": "Appointment 1",
+  "description": "Test Description",
+  "date": "2021-01-19T23:00:00",
+  "startTime": "01:02",
+  "endTime": "03:04"
+}
+
+<> 2021-01-15T160618.200.json
+
+###
+
+POST http://localhost:8080/calendar/Calendar1/addAppointment
+Content-Type: application/json
+
+{
+  "title": "Appointment 1",
+  "description": "Test Description",
+  "date": "2021-01-19T23:00:00",
+  "startTime": "01:02",
+  "endTime": "03:04"
+}
+
+<> 2021-01-15T160537.500.html
+
+###
+
 POST http://localhost:8080/calendar/Calendar1/addAppointment
 Content-Type: application/json
 
@@ -777,42 +807,6 @@ Content-Type: application/json
 }
 
 <> 2021-01-10T202006.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T200653.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-06",
-    "startTime": "01:02",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T200633.200.json
 
 ###
 

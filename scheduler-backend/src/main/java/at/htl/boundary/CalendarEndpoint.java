@@ -14,6 +14,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,7 +61,7 @@ public class CalendarEndpoint {
         Appointment appointment = new Appointment(
                 jsonObject.getString("title"),
                 jsonObject.getString("description"),
-                LocalDate.parse(jsonObject.getString("date")),
+                LocalDateTime.parse(jsonObject.getString("date")),
                 LocalTime.parse(jsonObject.getString("startTime")),
                 LocalTime.parse(jsonObject.getString("endTime"))
         );

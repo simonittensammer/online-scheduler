@@ -18,7 +18,7 @@ public class Appointment {
 
     private String description;
 
-    private LocalDate date;
+    private LocalDateTime date;
 
     private LocalTime startTime;
 
@@ -27,7 +27,7 @@ public class Appointment {
     public Appointment() {
     }
 
-    public Appointment(String title, String description, LocalDate date, LocalTime startTime, LocalTime endTime) {
+    public Appointment(String title, String description, LocalDateTime date, LocalTime startTime, LocalTime endTime) {
         this.title = title;
         this.description = description;
         this.date = date;
@@ -59,11 +59,11 @@ public class Appointment {
         this.description = description;
     }
 
-    public LocalDate getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
