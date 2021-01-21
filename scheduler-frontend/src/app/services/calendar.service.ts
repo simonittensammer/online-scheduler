@@ -42,7 +42,7 @@ export class CalendarService {
   }
 
   addAppointment(appointment: Appointment): Observable<Appointment> {
-    return this.http.post<Appointment>(this.SERVER_URL + 'calendar/' + this.calendar?.name + '/addAppointment', appointment);
+    return this.http.post<Appointment>(this.SERVER_URL + 'calendar/' + this.calendar?.name + '/appointment', appointment);
   }
 
   updateAppointment(appointment: Appointment): Observable<Appointment> {

@@ -87,7 +87,7 @@ public class CalendarEndpoint {
 //    }
 
     @POST
-    @Path("/{name}/addAppointment")
+    @Path("/{name}/appointment")
     public Response addAppointment(@PathParam("name") String name, AppointmentDto appointmentDto) {
         Appointment appointment = new Appointment(appointmentDto);
 
