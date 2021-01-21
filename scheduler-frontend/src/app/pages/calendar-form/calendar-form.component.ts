@@ -14,6 +14,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class CalendarFormComponent implements OnInit {
 
   calendarForm!: FormGroup;
+  hide: boolean = true;
 
   constructor(
     private router: Router,

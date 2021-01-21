@@ -18,15 +18,16 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="pw" placeholder="Password">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="pw" placeholder="Password">
+        <mat-icon matSuffix class="toggleButton" (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
       <br>
 
-<!--      <mat-form-field appearance="outline">-->
-<!--        <mat-label>Confirm Password</mat-label>-->
-<!--        <input matInput type="text" placeholder="Confirm Password">-->
-<!--      </mat-form-field>-->
-<!--      <br>-->
+      <!--      <mat-form-field appearance="outline">-->
+      <!--        <mat-label>Confirm Password</mat-label>-->
+      <!--        <input matInput type="text" placeholder="Confirm Password">-->
+      <!--      </mat-form-field>-->
+      <!--      <br>-->
 
       <button mat-raised-button color="primary" class="formButton" (click)="saveCalendar()">Save Calendar</button>
       <button mat-raised-button class="formButton" (click)="goBack()">Cancel</button>
