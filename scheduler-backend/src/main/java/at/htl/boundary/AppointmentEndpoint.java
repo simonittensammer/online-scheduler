@@ -34,6 +34,12 @@ public class AppointmentEndpoint {
         return ar.listAll();
     }
 
+    @GET
+    @Path("/{id}")
+    public Appointment getAppointment(@PathParam("id") Long id) {
+        return ar.findById(id);
+    }
+
 //    @POST
 //    public Response addAppointment(JsonObject jsonObject) {
 //        String calendarName = jsonObject.getString("calendarName");

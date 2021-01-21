@@ -1,3 +1,9 @@
+GET http://localhost:8080/appointment/1
+
+<> 2021-01-21T200505.200.json
+
+###
+
 GET http://localhost:8080/calendar
 
 <> 2021-01-18T155950.200.json
@@ -727,24 +733,6 @@ Content-Type: application/json
 }
 
 <> 2021-01-10T202136.200.json
-
-###
-
-POST http://localhost:8080/appointment
-Content-Type: application/json
-
-{
-  "calendarName": "Calendar1",
-  "appointment": {
-    "title": "Appointment 1",
-    "description": "Test Description",
-    "date": "2021-01-05",
-    "startTime": "01:01",
-    "endTime": "03:04"
-  }
-}
-
-<> 2021-01-10T202123.500.html
 
 ###
 
