@@ -4,6 +4,8 @@ import {CalendarService} from '../../services/calendar.service';
 import {Calendar} from '../../models/calendar';
 import {first} from 'rxjs/operators';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Appointment} from '../../models/appointment';
+import {AppointmentService} from '../../services/appointment.service';
 
 @Component({
   selector: 'app-calendar-view',
@@ -16,6 +18,7 @@ export class CalendarViewComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     public calendarService: CalendarService,
+    public appointmentService: AppointmentService,
     private snackBar: MatSnackBar
   ) {
   }
@@ -30,7 +33,13 @@ export class CalendarViewComponent implements OnInit {
     });
   }
 
-  showAppointmentSettings(): void {
+  createAppointment(): void {
     this.router.navigate(['appointmentSettings', '']);
+    // this.appointmentService.editedAppointment = null;
+  }
+
+  editAppointment(appointment: Appointment): void {
+    this.router.navigate(['appointmentSettings', appointment.id]);
+    // this.appointmentService.editedAppointment = appointment;
   }
 }

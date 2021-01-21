@@ -14,7 +14,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class CalendarFormComponent implements OnInit {
 
   calendarForm!: FormGroup;
-  hide: boolean = true;
+  hide = true;
 
   constructor(
     private router: Router,
@@ -38,7 +38,7 @@ export class CalendarFormComponent implements OnInit {
     }
   }
 
-  saveCalendar(): void { // REMINDER: add feature if calendar is edited and not created
+  saveCalendar(): void {
     if (this.calendarService.calendar) {
       const updatedCalendar = new Calendar(
         this.calendarService.calendar.name,

@@ -6,7 +6,12 @@
               *ngIf="i==0 || i > 0 && calendarService.calendar.appointments[i-1].date != appointment.date">{{ appointment.date | date:'dd/MM/yyyy' }}</span>
 
         <mat-card>
-          <mat-card-title>{{ appointment.title }}</mat-card-title>
+          <mat-card-title>
+            {{ appointment.title }}
+            <button mat-icon-button class="icon cardIcon" (click)="editAppointment(appointment)">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
           <mat-card-content>{{ appointment.start }} - {{ appointment.end }}</mat-card-content>
         </mat-card>
@@ -20,6 +25,6 @@
         </mat-card>
       </ng-container>
     </div>
-    <button mat-raised-button color="primary" class="createButton" (click)="showAppointmentSettings()">Add Appointment</button>
+    <button mat-raised-button color="primary" class="createButton" (click)="createAppointment()">Add Appointment</button>
   </div>
 </div>
