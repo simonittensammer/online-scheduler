@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Appointment} from '../models/appointment';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class CalendarService {
   calendarList: Array<Calendar> = [];
 
   constructor(
+    private snackBar: MatSnackBar,
     private http: HttpClient
   ) {
   }
@@ -40,5 +42,22 @@ export class CalendarService {
 
   addAppointment(appointment: Appointment): Observable<Appointment> {
     return this.http.post<Appointment>(this.SERVER_URL + 'calendar/' + this.calendar?.name + '/addAppointment', appointment);
+  }
+
+  copyUrl(calendar: Calendar | null): void{
+    const calendarName = calendar?.name;
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = 'https://simonittensammer.github.io/online-scheduler' + '/calendar/' + calendarName;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+
+    this.snackBar.open('Link for calendar "' + calendarName + '" copied!', 'Done', {duration: 2500});
   }
 }

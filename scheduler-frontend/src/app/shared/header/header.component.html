@@ -16,7 +16,7 @@
   <button mat-icon-button *ngIf="calendarService.calendar != null" class="icon" (click)="showCalendarSettings(calendarService.calendar)">
     <mat-icon>edit</mat-icon>
   </button>
-  <button mat-icon-button class="icon" (click)="copyUrl()">
+  <button mat-icon-button *ngIf="calendarService.calendar != null" class="icon" (click)="calendarService.copyUrl(calendarService.calendar)">
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
