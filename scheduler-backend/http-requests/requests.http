@@ -4,7 +4,7 @@ GET http://localhost:8080/calendar
 
 ###
 
-GET http://localhost:8080/calendar/Calendar1
+GET http://localhost:8080/calendar/Testkalender
 
 ###
 
@@ -28,6 +28,19 @@ Content-Type: application/json
 ###
 
 POST http://localhost:8080/calendar/Calendar1/addAppointment
+Content-Type: application/json
+
+{
+  "title": "Appointment 1",
+  "description": "Test Description",
+  "date": "2021-01-19T23:00:00",
+  "startTime": "01:02",
+  "endTime": "03:04"
+}
+
+###
+
+PUT http://localhost:8080/appointment/1
 Content-Type: application/json
 
 {

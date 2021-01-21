@@ -40,12 +40,6 @@ public class AppointmentEndpoint {
         return ar.findById(id);
     }
 
-    @PUT
-    public Response putAppointment(Appointment appointment) {
-        ar.update(appointment);
-        return Response.ok(appointment).build();
-    }
-
     @DELETE
     @Path("/{id}")
     public Response deleteAppointment(@PathParam("id") Long id, JsonObject jsonObject) {

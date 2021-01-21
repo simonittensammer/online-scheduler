@@ -14,6 +14,7 @@ export class CalendarService {
 
   calendar!: Calendar | null;
   calendarList: Array<Calendar> = [];
+  editedAppointment!: Appointment | null;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -44,7 +45,11 @@ export class CalendarService {
     return this.http.post<Appointment>(this.SERVER_URL + 'calendar/' + this.calendar?.name + '/addAppointment', appointment);
   }
 
-  copyUrl(calendar: Calendar | null): void{
+  updateAppointment(appointment: Appointment): Observable<Appointment> {
+    return this.http.put<Appointment>(this.SERVER_URL + '/calendar/' + this.calendar?.name + '/appointment/' + this.editedAppointment?.id, appointment);
+  }
+
+  copyUrl(calendar: Calendar | null): void {
     const calendarName = calendar?.name;
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';

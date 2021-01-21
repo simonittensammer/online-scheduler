@@ -2,6 +2,7 @@ package at.htl.boundary;
 
 import at.htl.control.AppointmentRepository;
 import at.htl.control.CalendarRepository;
+import at.htl.dto.AppointmentDto;
 import at.htl.entity.Appointment;
 import at.htl.entity.Calendar;
 import org.hibernate.Hibernate;
@@ -44,7 +45,10 @@ public class CalendarEndpoint {
     @GET
     @Path("/{name}")
     public Calendar getCalendar(@PathParam("name") String name) {
-        return cr.findByName(name);
+        Calendar calendar = cr.findByName(name);
+        Hibernate.initialize(calendar.getAppointments());
+        System.out.println(calendar.getAppointments());
+        return calendar;
     }
 
     @POST
@@ -57,29 +61,53 @@ public class CalendarEndpoint {
         return Response.ok(calendar).build();
     }
 
+//    @POST
+//    @Path("/{name}/addAppointment")
+//    public Response addAppointment(@PathParam("name") String name, JsonObject jsonObject) {
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
+//
+//        Appointment appointment = new Appointment(
+//                jsonObject.getString("title"),
+//                jsonObject.getString("description"),
+//                LocalDateTime.parse(jsonObject.getString("date"), formatter).plusDays(1),
+//                LocalTime.parse(jsonObject.getString("startTime")),
+//                LocalTime.parse(jsonObject.getString("endTime"))
+//        );
+//
+//        ar.persist(appointment);
+//
+//        Calendar calendar = cr.findByName(name);
+//        List<Appointment> appointments = calendar.getAppointments();
+//        appointments.add(appointment);
+//        calendar.setAppointments(appointments);
+//
+//        cr.update(calendar);
+//
+//        return Response.ok(appointment).build();
+//    }
+
     @POST
     @Path("/{name}/addAppointment")
-    public Response addAppointment(@PathParam("name") String name, JsonObject jsonObject) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH);
-
-        Appointment appointment = new Appointment(
-                jsonObject.getString("title"),
-                jsonObject.getString("description"),
-                LocalDateTime.parse(jsonObject.getString("date"), formatter).plusDays(1),
-                LocalTime.parse(jsonObject.getString("startTime")),
-                LocalTime.parse(jsonObject.getString("endTime"))
-        );
+    public Response addAppointment(@PathParam("name") String name, AppointmentDto appointmentDto) {
+        Appointment appointment = new Appointment(appointmentDto);
 
         ar.persist(appointment);
 
         Calendar calendar = cr.findByName(name);
-        List<Appointment> appointments = calendar.getAppointments();
-        appointments.add(appointment);
-        calendar.setAppointments(appointments);
-
-        cr.update(calendar);
+        calendar.addAppointment(appointment);
+        appointment.setCalendar(calendar);
 
         return Response.ok(appointment).build();
+    }
+
+    @PUT
+    @Path("/{name}/appointment/{id}")
+    public Response updateAppointment(@PathParam("name") String name, @PathParam("id") Long id, AppointmentDto appointmentDto) {
+        Appointment appointment = ar.findById(id);
+
+        appointment.update(appointmentDto);
+
+        return Response.noContent().build();
     }
 
     @PUT

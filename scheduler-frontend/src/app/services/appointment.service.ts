@@ -10,7 +10,6 @@ import {Appointment} from '../models/appointment';
 })
 export class AppointmentService {
   SERVER_URL = 'http://localhost:8080/';
-  editedAppointment!: Appointment | null;
 
   constructor(
     private http: HttpClient
@@ -22,9 +21,5 @@ export class AppointmentService {
       .pipe(map(appointment => {
         return appointment;
       }));
-  }
-
-  updateAppointment(appointment: Appointment): Observable<Appointment> {
-    return this.http.put<Appointment>(this.SERVER_URL + 'appointment/', appointment);
   }
 }

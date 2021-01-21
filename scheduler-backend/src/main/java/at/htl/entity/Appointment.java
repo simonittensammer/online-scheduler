@@ -1,6 +1,9 @@
 package at.htl.entity;
 
+import at.htl.dto.AppointmentDto;
+
 import javax.json.bind.annotation.JsonbDateFormat;
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -24,15 +27,23 @@ public class Appointment {
 
     private LocalTime endTime;
 
+    @ManyToOne
+    @JsonbTransient
+    private Calendar calendar;
+
     public Appointment() {
     }
 
-    public Appointment(String title, String description, LocalDateTime date, LocalTime startTime, LocalTime endTime) {
+    public Appointment(String title, String description, LocalDateTime date, LocalTime startTime, LocalTime endTime, Calendar calendar) {
         this.title = title;
         this.description = description;
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
+    }
+
+    public Appointment(AppointmentDto appointmentDto) {
+        update(appointmentDto);
     }
 
     public Long getId() {
@@ -81,5 +92,21 @@ public class Appointment {
 
     public void setEnd(LocalTime end) {
         this.endTime = end;
+    }
+
+    public Calendar getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(Calendar calendar) {
+        this.calendar = calendar;
+    }
+
+    public void update(AppointmentDto appointmentDto) {
+        this.title = appointmentDto.getTitle();
+        this.description = appointmentDto.getDescription();
+        this.date = appointmentDto.getDate();
+        this.startTime = appointmentDto.getStartTime();
+        this.endTime = appointmentDto.getEndTime();
     }
 }

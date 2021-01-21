@@ -40,31 +40,34 @@ export class AppointmentFormComponent implements OnInit {
         this.appointmentService.getAppointment(params.id)
           .pipe(first())
           .subscribe(value => {
-            this.appointmentService.editedAppointment = value;
-            this.appointmentForm.patchValue(this.appointmentService.editedAppointment);
-            console.log(this.appointmentService.editedAppointment);
+            this.calendarService.editedAppointment = value;
+            this.appointmentForm.patchValue(this.calendarService.editedAppointment);
+            console.log(this.calendarService.editedAppointment);
           });
       } else {
-        this.appointmentService.editedAppointment = null;
-        console.log(this.appointmentService.editedAppointment);
+        this.calendarService.editedAppointment = null;
+        console.log(this.calendarService.editedAppointment);
       }
     });
   }
 
   saveAppointment(): void {
-    if (this.appointmentService.editedAppointment != null) {
+    if (this.calendarService.editedAppointment != null) {
       console.log('update');
-      this.appointmentService.updateAppointment(this.appointmentForm.value).subscribe(() => {
+      this.calendarService.updateAppointment(this.appointmentForm.value).subscribe(() => {
         this.snackBar.open('Appointment successfully updated!', 'Done', {duration: 2500});
         this.calendarService.getAllCalendars().subscribe(value2 => {
           this.calendarService.calendarList = value2;
           this.location.back();
-          this.appointmentService.editedAppointment = null;
+          this.calendarService.editedAppointment = null;
         });
       });
     } else {
       console.log('create');
-      this.calendarService.addAppointment(this.appointmentForm.value).subscribe(value => {
+      console.log(this.appointmentForm.value);
+      const appointment = this.appointmentForm.value;
+      appointment.date = appointment.date.toISOString();
+      this.calendarService.addAppointment(appointment).subscribe(value => {
         this.calendarService.calendar?.appointments.push(value);
         this.snackBar.open('Appointment successfully created!', 'Done', {duration: 2500});
         this.location.back();
