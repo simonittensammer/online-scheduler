@@ -51,7 +51,7 @@ export class CalendarService {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    selBox.value = 'https://simonittensammer.github.io/online-scheduler' + '/calendar/' + calendarName;
+    selBox.value = window.location.origin + '/calendar/' + calendarName;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
