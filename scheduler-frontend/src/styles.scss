@@ -51,6 +51,10 @@ mat-card {
   cursor: pointer;
 }
 
+.cardIcon {
+  float: right;
+}
+
 .createButton {
   position: fixed !important;
   right: 7.5vw;
